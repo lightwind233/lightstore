@@ -1,0 +1,173 @@
+/* Non-theme dependent stuff. */
+
+.circular {
+    border-radius: 50%;
+}
+
+.raised {
+    margin-bottom: 1.1rem;
+    border-radius: .4rem;
+}
+
+.bg-primary a:not(.btn) {
+    border-bottom: .1rem solid currentColor;
+    padding-bottom: .05rem;
+    text-decoration: none
+}
+
+.bg-gray a:not(.btn):not(.docs-logo) {
+    border-bottom: .1rem solid currentColor;
+    padding-bottom: .05rem;
+    text-decoration: none
+}
+
+.docs-brand {
+    height: 2rem;
+    left: 1.5rem;
+    position: fixed;
+    top: .85rem
+}
+
+.docs-brand .docs-logo {
+    align-items: center;
+    border-radius: .1rem;
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    -ms-flex-align: center;
+    font-size: .7rem;
+    height: 2rem;
+    padding: .2rem;
+    width: auto
+}
+
+.docs-brand .docs-logo:focus, .docs-brand .docs-logo:hover {
+    text-decoration: none
+}
+
+.docs-brand .docs-logo img {
+    display: inline-block;
+    height: auto;
+    width: 1.6rem
+}
+
+.docs-brand .docs-logo h2 {
+    display: inline-block;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin-bottom: 0;
+    margin-left: .5rem;
+    margin-right: .3rem
+}
+
+.section-hero {
+    padding: 1rem .5rem
+}
+
+.section-hero .docs-brand {
+    position: absolute;
+    top: .85rem
+}
+
+.section-hero .column {
+    padding: .4rem
+}
+
+.section-features {
+    padding: 3rem .5rem
+}
+
+.section-features .column {
+    padding: .4rem
+}
+
+.card {
+    background: 0 0;
+    border: 0;
+    padding: .5rem
+}
+
+.card .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0
+}
+
+.grid-hero {
+    padding-bottom: 0.5rem;
+    padding-top: 5.6rem
+}
+
+.grid-hero h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem
+}
+
+.grid-hero h2 {
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.grid-hero h2 u {
+    border-bottom: .1rem solid currentColor;
+    padding-bottom: .05rem;
+    text-decoration: none
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+@media (max-width:375px) {
+    .card-header {
+        padding-top: .4rem !important;
+    }
+}
+
+@media (max-width:600px) {
+    .grid-hero h2 {
+        font-size: .9rem
+    }
+    .grid-hero .card {
+        padding: 0
+    }
+    .mr-2 {
+        margin-right: .6rem !important
+    }
+    .icons-frame {
+        margin-bottom: 1rem !important;
+    }
+    .card-body img {
+        margin-bottom: .8rem;
+    }
+}
+
+@media (min-width:601px) {
+    .mr-2 {
+        margin-right: .7rem !important
+    }
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+
+.icon img {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+
+.img-link {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}

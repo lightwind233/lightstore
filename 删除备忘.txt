@@ -1,0 +1,95 @@
+ <nav class="sina-nav mobile-sidebar navbar-fixed" data-top="0">
+  <div class="container">
+ 
+    <div class="search-box">
+      <form role="search" method="get" action="#">
+        <span class="search-addon close-search"><i class="fa fa-times"></i></span>
+        <div class="search-input">
+          <input type="search" class="form-control" placeholder="Search here" value="" name="">
+        </div>
+        <span class="search-addon search-icon"><i class="fa fa-search"></i></span>
+      </form>
+    </div><!-- .search-box -->
+ 
+    <!-- .extension-nav -->
+ 
+    <div class="sina-nav-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="sina-brand social-on" href="#">
+        <h2>
+          ZERONER
+        </h2>
+        <p>Break through from zero</p>
+      </a>
+    </div><!-- .sina-nav-header -->
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
+        <li class="scroll"><a href="../../index.html">Home</a></li>
+        <li class="active scroll"><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu<p class="description">This is Description</p></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Custom Menu</a></li>
+                <li><a href="#">Custom Menu</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Custom Menu</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown menu-item-has-mega-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu</a>
+          <div class="mega-menu dropdown-menu">
+            <ul class="mega-menu-row" role="menu">
+              <li class="mega-menu-col col-md-4">
+                <h4 class="mega-menu-col-title">Menu Titlle</h4>
+                <ul class="sub-menu">
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                </ul>
+              </li>
+              <li class="mega-menu-col col-md-4">
+                <h4 class="mega-menu-col-title">Menu Titlle</h4>
+                <ul class="sub-menu">
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                </ul>
+              </li>
+              <li class="mega-menu-col col-md-4">
+                <h4 class="mega-menu-col-title">Menu Titlle</h4>
+                <ul class="sub-menu">
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                </ul>
+              </li>
+            </ul><!-- end row -->
+          </div>
+        </li>
+        <li class="scroll"><a href="#blog">Blog</a></li>
+        <li class="scroll"><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- .container -->
+ 
+  <!-- Start widget-bar -->  <!-- End widget-bar -->
+</nav>
