@@ -61,7 +61,7 @@ h6 {
 }
 
 .bg-light-gray {
-    background-color:#f2d987;
+    background-color:#a6d8cc;
 }
 
 .bg-darkest-gray {
@@ -1004,7 +1004,7 @@ header .parallax .five {
 }
  
 .main body {
-  background-color: hsl(180, 20%, 90%);
+  --background-color: hsl(180, 20%, 90%);
  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  
@@ -1031,30 +1031,29 @@ header .parallax .five {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+	padding: 200ps;
 }
  
 .main .wrap {
   margin: 2rem;
  
   -webkit-transform-style: preserve-3d;
+ 
           transform-style: preserve-3d;
-	
   -webkit-transform: perspective(100rem);
           transform: perspective(100rem);
-   
-  background-color:#8AD3DF;
  
   cursor: pointer;
 }
  
 .main .container {
-  rX: 0;
-  rY: 0;
-  bX: 50%;
-  bY: 80%;
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
  
-  width: 15rem;
-  height: 20rem;
+  width: 16rem;
+  height: 22rem;
   border: 1px solid var(--background-color);
   border-radius: 1.6rem;
   padding: 4rem;
@@ -1136,3 +1135,43 @@ header .parallax .five {
 }
 /*小卡片结尾*/
 
+
+.footer {
+	    width: 100%;
+    height: 195px;
+    background-color: #e5e5e5;
+}
+footer img {
+	max-width: 30px;
+	height:auto;
+}
+
+.img-responsive {
+	max-width:100%;
+}
+
+/*= common css to all effects =*/
+.single-member{width: 280px; float: left; margin: 30px 2.5%; background-color: #fff; text-align: center; position: relative;}
+.member-image img{max-width: 100%; vertical-align: middle;}
+.member-info h3 {font-size: 24px; font-weight: normal; margin: 10px 0 0; text-transform: uppercase;}
+.member-info h5 {font-size: 16px; font-weight: 300; margin: 0 0 15px; line-height: 22px;}
+.member-info p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin-bottom: 10px;}
+.social-touch a{display: inline-block; width: 27px; height: 26px; vertical-align: middle; margin: 0 2px; background-image: url(../images/social-icons.png); background-repeat: no-repeat; opacity: 0.7; transition: 0.3s;}
+.social-touch a:hover{opacity: 1; transition: 0.3s;}
+.fb-touch{background-position: 0 0;}
+.tweet-touch{background-position: -35px 0;}
+.linkedin-touch{background-position: -71px 0;}
+.icon-colored .fb-touch{background-position: 0 -27px;}
+.icon-colored .tweet-touch{background-position: -35px -27px;}
+.icon-colored .linkedin-touch{background-position: -71px -27px;}
+/*= common css to all effects end =*/
+
+/*= effect-5 css =*/
+.effect-5{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-5 .member-info {background-color: #fff; position: absolute; width: 100%; top: 0; left: 0; height: 82px; transition: 0.3s; z-index: 2;}
+.effect-5 .member-image{margin-top: 82px; float: left; width: 100%; position: relative; transition: 0.3s; z-index: 4;}
+.effect-5 .member-image img{width: 100%;}
+.effect-5 .member-info:before{border-left: 140px solid transparent; border-right: 140px solid transparent; border-top: 15px solid #fff; bottom: -15px; content: ""; left: 0; position: absolute; z-index: 9;}
+.effect-5:hover .member-info{height: 215px; transition: 0.3s; z-index: 6;}
+.effect-5:hover .member-image{margin-top: 200px; transition: 0.3s;}
+/*= effect-5 css end =*/

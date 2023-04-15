@@ -206,13 +206,14 @@
   position: static;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu.dropdown-menu {
-  width: 100%;
-  padding: 0;
-  background-color: #fcfcfc;
+  width: 400px;
+	left:29%;
+	padding-bottom: 0px;
+  background-color: #fcfcf;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-row {
-  width: 100%;
-  float: right;
+  width: 150%;
+	padding-bottom: 0px;
 }
 .sina-nav .menu-item-has-mega-menu.dropdown .mega-menu-col {
   list-style: none;
@@ -444,7 +445,6 @@
   }
   .sina-nav .sina-menu .dropdown .mega-menu.dropdown-menu {
     max-height: 400px;
-    overflow-y: auto;
   }
   .sina-nav .sina-menu .mega-menu-col {
     padding: 10px 15px;

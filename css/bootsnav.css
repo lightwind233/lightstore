@@ -622,6 +622,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     
     nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content{
         display: none;
+		
     }
     
     nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a{
