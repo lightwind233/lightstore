@@ -7,12 +7,21 @@
 }
 
 html {
+	
   font-size: 62.5%;
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+h12 {
+  text-align: center;
 }
 
 body {
   --background-color: hsl(180, 20%, 90%);
-
+	margin: 0;
+  width: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   min-height: 100vh;
@@ -26,6 +35,7 @@ body {
 h1 {
   font-size: 3.2rem;
   padding-top: 2rem;
+	text-align: center;
 }
 
 h1+p {
@@ -604,4 +614,77 @@ footer img   {
 
 .kk4 {
 	background-color:#63b7b9;
+}
+
+.scene_book {
+    width: 45%;
+    height: 90%;
+    margin: 5% 5% 5% 50%;
+  
+  perspective: 1000px;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  transform-style: preserve-3d;
+}
+
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  transition: 1.5s transform;
+  transform-style: preserve-3d;  
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
+  
+  backface-visibility: hidden;
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
+  background: linear-gradient(to bottom right, #fff, #ccc);
+}
+.back {
+  transform: rotateY(180deg);
+}
+
+.page.activebook {
+  z-index: 1;
+}
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+.qr {
+  margin: 50px auto;
+  max-width: 50%;
+}
+.qr img {
+  display: block;
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .scene {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
 }
