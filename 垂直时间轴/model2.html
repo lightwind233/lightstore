@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/model2style.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
+		<link href="css/1870primary.css" rel="stylesheet" type="text/css">
+	<link href="css/1870Level2.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/sina-nav.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootsnav.css"/>
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+	<style type="text/css">
+		.demo{
+			padding: 2em 0;
+		}
+		.main-timeline{
+		    padding: 150px 0 0;
+		    position: relative;
+		    display: inline-block;
+		}
+		.main-timeline:before,
+		.main-timeline:after{
+		    content: '';
+		    height: 30px;
+		    width: 50px;
+		    background: #909090;
+		    border-radius: 50%;
+		    transform: translateX(-50%);
+		    position: absolute;
+		    left: 50%;
+		    top: 0;
+		    z-index: 2;
+		}
+		.main-timeline:after{
+		    top: auto;
+		    bottom: -10px;
+		}
+		.main-timeline .timeline{
+		    width: 52.2%;
+		    float: left;
+		    display: block;
+		    position: relative;
+		    z-index: 1;
+		}
+		.main-timeline .timeline-content{
+		    color: #000;
+		    border-right: 50px solid #E5E5E5;
+		    padding: 40px 30px 20px 0;
+		    display: block;
+		    position: relative;
+		}
+		.main-timeline .timeline-content:hover{ text-decoration: none; }
+		.main-timeline .timeline-content:before,
+		.main-timeline .timeline-content:after{
+		    content: '';
+		    background-color: #00B3AD;
+		    height: 80px;
+		    width: 50px;
+		    border-radius: 23px;
+		    position: absolute;
+		    right: -50px;
+		    top: 30px;
+		}
+		.main-timeline .timeline-content:before{
+		    background-color: #047a74;
+		    height: 30px;
+		    border-radius: 50%;
+		    z-index: 1;
+		}
+		.main-timeline .title{
+		    color: #fff;
+		    background-color: #00B3AD;
+		    font-weight: 800;
+		    font-size: 20px;
+		    padding: 10px 25px;
+		    margin: 0 0 35px 0;
+		    -webkit-clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+		    clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+		}
+		.main-timeline .inner-content{
+		    padding-right: 150px;
+		    position: relative;
+		}
+		.main-timeline .timeline-icon{
+		    color: #fff;
+		    background-color: #00B3AD;
+		    font-size: 60px;
+		    text-align: center;
+		    line-height: 100px;
+		    height: 100px;
+		    width: 100px;
+		    border-radius: 50%;
+		    position: absolute;
+		    right: 0;
+		    top: 5px;
+		}
+		.main-timeline .description{
+		    font-size: 14px;
+		    text-align: justify;
+		    letter-spacing: 1px;
+		}
+		.main-timeline .timeline:nth-child(odd){ margin-top: -12%; }
+		.main-timeline .timeline:nth-child(even){
+		    float: right;
+		    width: 52.15%;
+		    margin-top: -12%;
+		}
+		.main-timeline .timeline:nth-child(even) .timeline-content{
+		    border-right: 0 solid transparent;
+		    border-left: 50px solid #E5E5E5;
+		    padding: 40px 0 20px 30px;
+		}
+		.main-timeline .timeline:nth-child(even) .timeline-content:before,
+		.main-timeline .timeline:nth-child(even) .timeline-content:after{
+		    right: auto;
+		    left: -50px;
+		}
+		.main-timeline .timeline:nth-child(even) .inner-content{
+		    padding-right: 0;
+		    padding-left: 150px;
+		}
+		.main-timeline .timeline:nth-child(even) .title{
+		    padding: 10px 25px 10px 40px;
+		    -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+		    clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+		}
+		.main-timeline .timeline:nth-child(even) .timeline-icon{
+		    right: auto;
+		    left: 0;
+		}
+		.main-timeline .timeline:nth-child(4n+2) .timeline-icon,
+		.main-timeline .timeline:nth-child(4n+2) .title,
+		.main-timeline .timeline:nth-child(4n+2) .timeline-content:after{
+		    background-color: #FF534F;
+		}
+		.main-timeline .timeline:nth-child(4n+2) .timeline-content:before{
+		    background-color: #a02724;
+		}
+		.main-timeline .timeline:nth-child(4n+3) .timeline-icon,
+		.main-timeline .timeline:nth-child(4n+3) .title,
+		.main-timeline .timeline:nth-child(4n+3) .timeline-content:after{
+		    background-color: #9642A4;
+		}
+		.main-timeline .timeline:nth-child(4n+3) .timeline-content:before{
+		    background-color: #6d167c;
+		}
+		.main-timeline .timeline:nth-child(4n+4) .timeline-icon,
+		.main-timeline .timeline:nth-child(4n+4) .title,
+		.main-timeline .timeline:nth-child(4n+4) .timeline-content:after{
+		    background-color: #FAB030;
+		}
+		.main-timeline .timeline:nth-child(4n+4) .timeline-content:before{
+		    background-color: #ba7807;
+		}
+		@media screen and (max-width:1200px){
+		    .main-timeline{ padding: 130px 0 0; }
+		    .main-timeline .timeline{ width: 52.66%; }
+		    .main-timeline .timeline:nth-child(even){ width: 52.66%; }
+		}
+		@media screen and (max-width:990px){
+		    .main-timeline{ padding: 100px 0 0; }
+		    .main-timeline .timeline{ width: 53.5%; }
+		    .main-timeline .timeline:nth-child(even){ width: 53.5%; }
+		    .main-timeline .inner-content{
+		        padding-right: 120px;
+		    }
+		    .main-timeline .timeline:nth-child(even) .inner-content{
+		        padding-left: 120px;
+		    }
+		}
+		@media screen and (max-width:767px){
+		    .main-timeline{ padding: 17px 0 0; }
+		    .main-timeline:before,
+		    .main-timeline:after{
+		        transform:translateX(0);
+		        left: 0;
+		    }
+		    .main-timeline:after{
+		        top: auto;
+		        bottom: -10px;
+		    }
+		    .main-timeline .timeline:nth-child(odd){
+		        margin-top: 0;
+		    }
+		    .main-timeline .timeline,
+		    .main-timeline .timeline:nth-child(even){
+		        width: 100%;
+		        margin-top: 0;
+		        float: right;
+		    }
+		    .main-timeline .timeline .title{
+		        padding: 10px 25px 10px 30px;
+		        -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+		        clip-path: polygon(5% 0, 100% 0, 100% 100%, 5% 100%, 0 50%);
+		    }
+		    .main-timeline .timeline-icon{
+		        right: auto;
+		        left: 0;
+		    }
+		    .main-timeline .inner-content{
+		        padding-right: 0;
+		        padding-left: 150px;
+		    }
+		    .main-timeline .timeline-content:before,
+		    .main-timeline .timeline-content:after{
+		        right: auto;
+		        left: -50px;
+		    }
+		    .main-timeline .timeline-content{
+		        border-right: 0 solid transparent;
+		        border-left: 50px solid #E5E5E5;
+		        padding: 40px 0 20px 30px;
+		    }
+		}
+		@media screen and (max-width:479px){
+		    .main-timeline .timeline .title,
+		    .main-timeline .timeline:nth-child(even) .title{
+		        font-size: 16px;
+		        padding: 10px 5px 10px 25px;
+		    }
+		    .main-timeline .timeline:nth-child(even) .inner-content,
+		    .main-timeline .inner-content{
+		        padding-right: 0;
+		        padding-left: 15px;
+		    }
+		    .main-timeline .timeline:nth-child(even) .timeline-icon,
+		    .main-timeline .timeline-icon{
+		        transform:scale(0.7);
+		        right: auto;
+		        left: -107px;
+		    }
+		}
+	</style>
+</head>
+<body>
+	<nav class="sina-nav mobile-sidebar navbar-fixed" data-top="0">
+  <div class="container">
+ 
+    <div class="search-box">
+      <form role="search" method="get" action="#">
+        <span class="search-addon close-search"><i class="fa fa-times"></i></span>
+        <div class="search-input">
+          <input type="search" class="form-control" placeholder="Search here" value="" name="">
+        </div>
+        <span class="search-addon search-icon"><i class="fa fa-search"></i></span>
+      </form>
+    </div><!-- .search-box -->
+ 
+    <!-- .extension-nav -->
+ 
+    <div class="sina-nav-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="sina-brand social-on" href="index.html">
+        <h2>
+          ZERONER
+        </h2>
+        <p>Break through from Zero</p>
+      </a>
+    </div><!-- .sina-nav-header -->
+ 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
+        <li class="scroll"><a href="index.html">Home</a></li>
+        <li class="active scroll"><a href="Team.html">Team</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Model</a>
+          <ul class="dropdown-menu">
+            <li><a href="Model.html">Model</a></li>
+            <li><a href="Description.html">Description</a>
+            </li>
+            <li class="dropdown">
+              <a href="Notebook.html" class="dropdown-toggle" data-toggle="dropdown" >Notebook</a>
+              <ul class="dropdown-menu">
+                <li><a href="Safety.html">Safety</a></li>
+                <li><a href="Collaboration.html">Collaboration</a></li>
+                <li class="dropdown">
+                  <a href="Contributions.html">Contributions</a>                </li>
+                <li><a href="Education.html">Education</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown menu-item-has-mega-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mega</a>
+          <div class="mega-menu dropdown-menu">
+            <ul class="mega-menu-row" role="menu">
+              <li class="mega-menu-col col-md-4">
+                <h4 class="mega-menu-col-title">Menu Titlle</h4>
+                <ul class="sub-menu">
+                  <li><a href="Implementation.html">Implementation</a></li>
+                  <li><a href="Improvement.html">Improvement</a></li>
+                  <li><a href="Overview.html">Overview</a></li>
+                </ul>
+              </li>
+              <li class="mega-menu-col col-md-4">
+                <h4 class="mega-menu-col-title">Menu Titlle</h4>
+                <ul class="sub-menu">
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                  <li><a href="#">Custom Menu</a></li>
+                </ul>
+              </li>
+            </ul><!-- end row -->
+          </div>
+        </li>
+        <li class="scroll"><a href="Medals.html">Medals</a></li>
+        <li class="scroll"><a href="Engineering.html">Engineering</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- .container -->
+ 
+  <!-- Start widget-bar -->  <!-- End widget-bar -->
+</nav>
+	<div class="htmleaf-container">
+<div class="demo">
+          <div class="container">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <div class="main-timeline">
+		                        <div class="timeline">
+		                            <a href="#" class="timeline-content">
+		                                <h3 class="title">Web Development</h3>
+		                                <div class="inner-content">
+		                                    <div class="timeline-icon">
+		                                        <i class="fa fa-rocket"></i>
+		                                    </div>
+		                                    <p class="description">
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                    </p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                        <div class="timeline">
+		                            <a href="#" class="timeline-content">
+		                                <h3 class="title">Web Designing</h3>
+		                                <div class="inner-content">
+		                                    <div class="timeline-icon">
+		                                        <i class="fa fa-globe"></i>
+		                                    </div>
+		                                    <p class="description">
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                    </p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                        <div class="timeline">
+		                            <a href="#" class="timeline-content">
+		                                <h3 class="title">Java Script</h3>
+		                                <div class="inner-content">
+		                                    <div class="timeline-icon">
+		                                        <i class="fa fa-users"></i>
+		                                    </div>
+		                                    <p class="description">
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                    </p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                        <div class="timeline">
+		                            <a href="#" class="timeline-content">
+		                                <h3 class="title">Web Development</h3>
+		                                <div class="inner-content">
+		                                    <div class="timeline-icon">
+		                                        <i class="fa fa-briefcase"></i>
+		                                    </div>
+		                                    <p class="description">
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus.
+		                                    </p>
+		                                </div>
+		                            </a>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+</div>
+	
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/bootsnav.js"></script>  
+	<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/sina-nav.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.transform2d.js"></script>
+<script src="js/clientLogin.js"></script>
+<script src="js/warTextEffect_jvollmer3.js"></script>
+<script src="js/jquery.accordianMenu_jvollmer3.js"></script>	
+</body>
+</html>
